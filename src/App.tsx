@@ -2,7 +2,9 @@ import { MantineProvider, ColorSchemeProvider, ColorScheme, Text } from '@mantin
 import { useState } from 'react';
 import { AppShell, ActionIcon, Navbar, Header, Footer } from '@mantine/core';
 import { IconSun, IconMoonStars } from '@tabler/icons-react';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 
+<meta name="theme-color" content="#319197"></meta>
 export default function App() {
   const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
   const toggleColorScheme = (value?: ColorScheme) =>
@@ -11,11 +13,14 @@ export default function App() {
   return (
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
       <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
-        
+        <HelmetProvider>
+        <Helmet>
+          <meta name="theme-color" content={dark ? "#1a1b1e" : "#ffffff"} />
+        </Helmet>
+        </HelmetProvider>
         <AppShell
         padding="md"
         header={<Header height={60} p="md">
-          
           <div style={{ display: "flex" }}>
             <Text
               variant="gradient"
