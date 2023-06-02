@@ -1,30 +1,36 @@
 import { MantineProvider, ColorSchemeProvider, ColorScheme, Text } from '@mantine/core';
 import { useState } from 'react';
-import { AppShell, ActionIcon, Navbar, Header, Footer } from '@mantine/core';
+import { AppShell, ActionIcon, Navbar, Footer } from '@mantine/core';
 import { IconSun, IconMoonStars } from '@tabler/icons-react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
+import Header from './Components/Header'
 
-<meta name="theme-color" content="#319197"></meta>
 export default function App() {
+
   const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
   const toggleColorScheme = (value?: ColorScheme) =>
     setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
   const dark = colorScheme === 'dark';
+
   return (
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
+
       <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
+
         <HelmetProvider>
         <Helmet>
           <meta name="theme-color" content={dark ? "#1a1b1e" : "#ffffff"} />
         </Helmet>
         </HelmetProvider>
-        <AppShell
+
+        <Header dark={dark} colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}></Header>
+        {/* <AppShell
         padding="md"
         header={<Header height={60} p="md">
           <div style={{ display: "flex" }}>
             <Text
               variant="gradient"
-              gradient={{ from: 'indigo', to: 'cyan', deg: 45}}
+              gradient={dark ? {from: 'yellow', to: 'yellow', deg: 45} : {from: 'cyan', to:'cyan', deg: 45}}
               sx={{ fontFamily: 'Greycliff CF, sans-serif' }}
               ta="left"
               fz="xl"
@@ -32,7 +38,7 @@ export default function App() {
             >Carson Sobolewski</Text>          
             <ActionIcon
               variant="outline"
-              color={dark ? 'yellow' : 'blue'}
+              color={dark ? 'yellow' : 'cyan'}
               onClick={() => toggleColorScheme()}
               title="Toggle color scheme"
               style={{ marginLeft: "auto"}}
@@ -46,7 +52,7 @@ export default function App() {
         })}
         >
 
-        </AppShell>
+        </AppShell> */}
         
       </MantineProvider>
     </ColorSchemeProvider>
