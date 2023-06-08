@@ -44,7 +44,7 @@ const Projects = () => {
       const { classes } = useStyles();
 
     const projectCards = projectList.map((project) => (
-        <Card shadow='sm' padding='lg' radius='md' key={project.title} className={classes.card}>
+        <Card shadow='sm' padding='lg' radius='md' key={project.title} withBorder className={classes.card}>
             <Card.Section component='a' href=''>
                 <Image
                     src={project.image}

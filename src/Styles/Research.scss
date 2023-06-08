@@ -1,0 +1,28 @@
+#research {
+    padding-top: 0;
+    h1 {
+        padding-bottom: 30px;
+    }
+    .research-text {
+        width: 100vh;
+    }
+    .research-image {
+        max-width: 200px;
+        max-height: 200px;
+    }
+    @media only screen and (max-width: 1086px) {
+        .research-text {
+            width: unset;
+            max-width: 350;
+        }
+        .card-group {
+            width: 30vh;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .research-image {
+            max-width: 500px;
+            max-height: unset;
+        }
+    }
+}
