@@ -90,7 +90,19 @@ const Header = (props: HeaderProps) => {
                         >
                             Carson Sobolewski
                         </Text>
-                
+                        <ActionIcon
+                            variant="outline"
+                            color={props.dark ? "yellow" : "cyan"}
+                            onClick={() => props.toggleColorScheme()}
+                            title="Toggle Color Scheme"
+                            style={{ marginLeft: "auto"}}
+                        >
+                            {props.dark ? (
+                                <IconSun size="20px" />
+                            ) : (
+                                <IconMoonStars size="20px" />
+                            )}
+                    </ActionIcon>
                 <div className="burger-button">
                     <Burger
                         opened={opened}

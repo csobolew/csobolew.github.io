@@ -11,7 +11,7 @@ const projectList = [
         title: 'Basic Rust Operating System',
         image: '',
         alt: 'Rust Operating System',
-        description: 'A website that searches various websites and combines the results to find the best deals on products.'
+        description: 'A basic operating system designed using the Rust programming language, with text output to the screen.'
     },
     {
         title: 'Portfolio Site',

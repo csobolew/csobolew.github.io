@@ -51,7 +51,8 @@ header {
         }
 
         .content-mobile {
-            display: block;
+            display: flex;
+            gap: 15px;
         }
 
         top: 30px;
