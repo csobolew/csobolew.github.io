@@ -22,11 +22,13 @@ const Banner = () => {
                 </div>
 
                 <div className="buttons">
-                    <Link to="section-one" smooth duration={500}>
-                        <Button style={{background: 'var(--button-color)'}} rightIcon={<MdOutlineArrowDownward size={16} />} radius="lg" size="md">Tell me more</Button>
+                    <Link to="project" smooth duration={500}>
+                        <Button style={{background: 'var(--button-color)'}} rightIcon={<MdOutlineArrowDownward size={16} />} radius="lg" size="md">My Projects</Button>
                     </Link>
 
-                    <Button variant="default" radius="lg" size="md">Other stuff</Button>
+                    <Link to='about' smooth duration={500}>
+                        <Button variant="default" radius="lg" size="md">More About Me</Button>
+                    </Link>
                 </div>
 
                 </div>
