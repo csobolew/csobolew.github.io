@@ -34,19 +34,21 @@ const Header = (props: HeaderProps) => {
                         ta="left"
                         fz="xl"
                         fw={700}
+                        component="a"
+                        href=""
                     >
                         Carson Sobolewski
                     </Text>
                 </div>
                 <div className="navbar">
                     <div className="navbar-item">
-                        <Link to="projects">Projects</Link>
+                        <Link to="projects" smooth duration={500}>Projects</Link>
                     </div>
                     <div className="navbar-item">
-                        <Link to="research">Research</Link>
+                        <Link to="research" smooth duration={500}>Research</Link>
                     </div>
                     <div className="navbar-item">
-                        <Link to="about">About Me</Link>
+                        <Link to="about" smooth duration={500}>About Me</Link>
                     </div>
                     <div className="navbar-item">
                         <ActionIcon
