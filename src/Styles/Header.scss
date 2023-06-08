@@ -11,14 +11,8 @@ header {
         .navbar-item {
             cursor: pointer;
             font-weight: 500;
-            
-                a {
-                    color: #2d2d2d;
-                    transition: all 0.1s ease;
-                }
-            
                 a:hover {
-                    color: #fab005;
+                    color: var(--hover-color);
                     text-decoration: none;
                 }
         }
@@ -63,4 +57,7 @@ header {
         left: 20px;
         right: 20px;
     }
+}
+:root {
+    --hover-color: #15aabf;
 }
