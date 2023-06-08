@@ -43,7 +43,7 @@ const Header = (props: HeaderProps) => {
                 </div>
                 <div className="navbar">
                     <div className="navbar-item">
-                        <Link to="projects" smooth duration={500}>Projects</Link>
+                        <Link to="project" smooth duration={500}>Projects</Link>
                     </div>
                     <div className="navbar-item">
                         <Link to="research" smooth duration={500}>Research</Link>
@@ -60,9 +60,9 @@ const Header = (props: HeaderProps) => {
                             style={{ marginLeft: "auto" }}
                         >
                             {props.dark ? (
-                                <IconSun size="1.1rem" />
+                                <IconSun size="20px" />
                             ) : (
-                                <IconMoonStars size="1.1rem" />
+                                <IconMoonStars size="20px" />
                             )}
                         </ActionIcon>
                     </div>
