@@ -1,7 +1,8 @@
-import { Text, ActionIcon, ColorScheme } from "@mantine/core";
+import { Text, ActionIcon, ColorScheme, Drawer, Title, Burger, Transition } from "@mantine/core";
 import { IconSun, IconMoonStars } from "@tabler/icons-react";
 import { HelmetProvider, Helmet } from "react-helmet-async";
 import { Link } from "react-scroll";
+import React from 'react';
 
 interface HeaderProps {
     dark: Boolean;
@@ -10,6 +11,8 @@ interface HeaderProps {
 }
 
 const Header = (props: HeaderProps) => {
+    const [opened, setOpened] = React.useState(false);
+    const title = opened ? 'Close navigation' : 'Open navigation';
     return (
         <header>
             <HelmetProvider>
@@ -67,6 +70,54 @@ const Header = (props: HeaderProps) => {
                         </ActionIcon>
                     </div>
                 </div>
+            </div>
+
+            <div className="content-mobile">
+                        <Text
+                            variant="gradient"
+                            gradient={
+                                props.dark
+                                    ? { from: "yellow", to: "yellow", deg: 45 }
+                                    : { from: "cyan", to: "cyan", deg: 45 }
+                                    
+                            }
+                            sx={{ fontFamily: "Greycliff CF, sans-serif"}}
+                            ta="left"
+                            fz="1.3rem"
+                            fw={700}
+                            component="a"
+                            href=""
+                        >
+                            Carson Sobolewski
+                        </Text>
+                
+                <div className="burger-button">
+                    <Burger
+                        opened={opened}
+                        onClick={() => setOpened((o) => !o)}
+                        title={title}
+                        size="sm"
+                    />
+                </div>
+
+                <Drawer
+                    transitionProps={{transition: "rotate-right", duration: 250, timingFunction: 'ease'}}
+                    overlayProps={{opacity: 0.55}}
+                    closeButtonProps={{'aria-label': "Close drawer"}}
+                    position="right"
+                    title="Menu"
+                    padding="xl"
+                    opened={opened}
+                    onClose={() => setOpened(false)}
+                >
+                    <div className="menu">
+                        <div className="menu-items">
+                            <div className="menu-item"><Link to="project" smooth duration={500} onClick={() => setOpened(false)}><Title order={2}>Projects</Title></Link></div>
+                            <div className="menu-item"><Link to="research" smooth duration={500} onClick={() => setOpened(false)}><Title order={2}>Research</Title></Link></div>
+                            <div className="menu-item"><Link to="about" smooth duration={500} onClick={() => setOpened(false)}><Title order={2}>About Me</Title></Link></div>
+                        </div>
+                    </div>
+                </Drawer>
             </div>
         </header>
     );

@@ -32,7 +32,7 @@ header {
     }
 
     @media only screen and (min-width: 769px) {
-        .content-desktop {
+        .content-title {
             display: flex;
         }
 
@@ -46,7 +46,7 @@ header {
     }
 
     @media only screen and (max-width: 768px) {
-        .content-desktop {
+        .content-title {
             display: none;
         }
 
