@@ -55,14 +55,11 @@ const Projects = () => {
             </Card.Section>
             <Group position='apart' mt='md' mb='xs'>
                 <Text weight={500} fz={19} size='md'>{project.title}</Text>
-                <Badge color='orange' size='lg'>
-                    New!
-                </Badge>
             </Group>
             <Text size='sm' color='dimmed'>
                 {project.description}
             </Text>
-            <Button style={{color: '#1a1b1e', background: 'var(--banner-background)'}} fullWidth mt='md' radius='md'>
+            <Button style={{color: 'var(--link-color)', background: 'var(--banner-background)'}} fullWidth mt='md' radius='md'>
                 Learn More
             </Button>
         </Card>
