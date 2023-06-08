@@ -43,7 +43,7 @@ const Research = () => {
                         <Card.Section>
                             <Group position='left' align='normal'>
                                 <Image className='research-image' radius='md' style={{paddingTop: 0}} src='0ori.png'/>
-                                <div style={{paddingLeft: '2vh', paddingBottom: '2vh'}}>
+                                <div style={{paddingLeft: '2vh', paddingBottom: '2vh', paddingRight: '2vh'}}>
                                     <Title mt='md' order={2}>Car Safety Prediction</Title>
                                     <div className='research-text'>
                                     <Text mt='sm'>
