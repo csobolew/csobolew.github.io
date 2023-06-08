@@ -29,10 +29,11 @@ const Header = (props: HeaderProps) => {
                             props.dark
                                 ? { from: "yellow", to: "yellow", deg: 45 }
                                 : { from: "cyan", to: "cyan", deg: 45 }
+                                
                         }
-                        sx={{ fontFamily: "Greycliff CF, sans-serif" }}
+                        sx={{ fontFamily: "Greycliff CF, sans-serif"}}
                         ta="left"
-                        fz="xl"
+                        fz="1.3rem"
                         fw={700}
                         component="a"
                         href=""

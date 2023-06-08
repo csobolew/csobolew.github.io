@@ -7,7 +7,7 @@ const Banner = () => {
             <Container fluid>
             <div className="banner-content">
 
-                <div style={{ marginBottom: 15 }}>
+                <div style={{ marginBottom: 10 }}>
                     <Text>
                         <MediaQuery query="(max-width: 768px)" styles={{ fontSize: '2.8rem !important' }}>
                             <h1 className="title">Carson Sobolewski</h1>
@@ -15,7 +15,7 @@ const Banner = () => {
                     </Text>
                 </div>
 
-                <div style={{ marginBottom: 25 }}>
+                <div style={{ marginBottom: 20 }}>
                     <Text size="xl">
                         I'm a <a>Computer Engineering</a> major at the University of Florida with a passion for <a>Computer Vision</a> and <a>Embedded Software</a>.
                     </Text>
