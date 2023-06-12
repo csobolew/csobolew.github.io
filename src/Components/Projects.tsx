@@ -24,7 +24,7 @@ const projectList = [
     },
     {
         title: 'Gameboy Emulator',
-        image: '',
+        image: 'GB.png',
         alt: 'Gameboy Emulator',
         description: 'A basic Gameboy Emulator with complete processor emulation (picture and audio processing are a WIP).'
     }
