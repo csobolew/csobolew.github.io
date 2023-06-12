@@ -1,5 +1,6 @@
-import { Container, Group, Text, List, SimpleGrid, Image, ThemeIcon, createStyles } from '@mantine/core'
-import { IconChevronRight } from '@tabler/icons-react'
+import { Container, Group, Text, List, SimpleGrid, Image, ActionIcon, ThemeIcon, createStyles } from '@mantine/core'
+import { IconAlignBoxLeftMiddle, IconChevronRight } from '@tabler/icons-react'
+import { IconBrandGithub } from '@tabler/icons-react'
 
 const useStyles = createStyles((theme) => ({
     inner: {
@@ -34,6 +35,21 @@ const useStyles = createStyles((theme) => ({
       [theme.fn.smallerThan("md")]: {
         display: "none",
       },
+    },
+    buttons: {
+        flex: 1,
+        justifyContent: 'center',
+        [theme.fn.largerThan("md")]: {
+            display:"none",
+        },
+    },
+    icons: {
+        margin: '5px'
+    },
+    icondiv: {
+        [theme.fn.smallerThan("md")]: {
+            marginLeft: '10px',
+        },
     },
   
     highlight: {
@@ -87,8 +103,12 @@ const { classes } = useStyles();
                 fz="xl"
               >
                 I have completed a wide variety of projects on topics that I find interesting, particularly in hardware emulation
-                and low level code.
+                and low level code. Feel free to look at my GitHub and grab my resume using the colored buttons.
               </Text>
+              <div className={classes.buttons}>
+                    <a href='https://github.com/csobolew'><IconBrandGithub style={{color: 'var(--button-color)'}} size='36px'> </IconBrandGithub></a>
+                    <a href='Resume.pdf'><IconAlignBoxLeftMiddle style={{color: 'var(--button-color)'}} size='36px'> </IconAlignBoxLeftMiddle></a>
+                </div>
               <Text
                 color=""
                 mt="md"
@@ -178,8 +198,16 @@ const { classes } = useStyles();
               alt="ProfilePicture"
               className={classes.image}
               radius='xl'
-            />
-          </div>
+              placeholder
+              caption={
+                <div className={classes.icondiv}>
+                    <a href='https://github.com/csobolew'><IconBrandGithub style={{color: 'var(--button-color)'}} size='36px'></IconBrandGithub></a>
+                    <a href='Resume.pdf' target='_blank'><IconAlignBoxLeftMiddle style={{color: 'var(--button-color)'}} size='36px'></IconAlignBoxLeftMiddle></a>
+                </div>
+                }>
+            </Image>
+        </div>
+        
         </Container>
         </section>
     </>
