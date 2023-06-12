@@ -11,14 +11,14 @@ const projectList = [
         description: 'A website that searches various websites and combines the results to find the best deals on products.'
     },
     {
-        title: 'Basic Rust Operating System',
-        image: '',
+        title: 'Rust Operating System',
+        image: 'RustOS.png',
         alt: 'Rust Operating System',
         description: 'A basic operating system designed using the Rust programming language, with text output to the screen.'
     },
     {
         title: 'Portfolio Site',
-        image: '',
+        image: 'Site.png',
         alt: 'Portfolio Site',
         description: "You're here! A portfolio website designed and built with React using Mantine, TypeScript, and SASS."
     },
