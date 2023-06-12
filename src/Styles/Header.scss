@@ -16,6 +16,10 @@ header {
                     color: var(--hover-color);
                     text-decoration: none;
                 }
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                }
         }
     }
 

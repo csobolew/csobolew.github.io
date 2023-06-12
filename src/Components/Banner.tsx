@@ -25,10 +25,7 @@ const Banner = () => {
                     <Link to="project" smooth duration={500}>
                         <Button style={{background: 'var(--button-color)'}} rightIcon={<MdOutlineArrowDownward size={16} />} radius="lg" size="md">My Projects</Button>
                     </Link>
-
-                    <Link to='about' smooth duration={500}>
-                        <Button variant="default" radius="lg" size="md">More About Me</Button>
-                    </Link>
+                <Button variant="default" radius="lg" size="md" component='a' href='/#/about'>More About Me</Button>
                 </div>
 
                 </div>

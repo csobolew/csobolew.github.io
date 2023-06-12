@@ -1,4 +1,7 @@
 import { Container, Title, Card, Image, Group, Text, createStyles, Button } from '@mantine/core';
+import { useLocation } from 'react-router-dom';
+import { useEffect} from 'react';
+
 
 const Research = () => {
     const useStyles = createStyles((theme) => ({
@@ -13,6 +16,16 @@ const Research = () => {
       }));
 
     const { classes } = useStyles();
+
+    const { state } = useLocation();
+    const { targetId } = state || {};
+
+    useEffect(() => {
+        const el = document.getElementById(targetId);
+        if (el) {
+        el.scrollIntoView({behavior: 'smooth'});
+        }
+    }, [targetId]);   
 
     return (
         <section id='research'>

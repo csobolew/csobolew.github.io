@@ -1,4 +1,7 @@
 import { createStyles, Card, Image, Group, Text, Button, Container, SimpleGrid, Badge, Title } from '@mantine/core';
+import { Element } from 'react-scroll';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const projectList = [
     {
@@ -65,15 +68,27 @@ const Projects = () => {
         </Card>
     ));
 
+    const { state } = useLocation();
+    const { targetId } = state || {};
+
+    useEffect(() => {
+        const el = document.getElementById(targetId);
+        if (el) {
+          el.scrollIntoView({behavior: 'smooth'});
+        }
+      }, [targetId]);
+
     return (
+        <Element name='project'>
         <section id='project'>
             <Container size='xl'>
-                <Title>Projects</Title>
+                <Title className='project'>Projects</Title>
                 <SimpleGrid cols={3} breakpoints={[{ maxWidth: 'sm', cols: 1}]}>
                     {projectCards}
                 </SimpleGrid>
             </Container>
         </section>
+        </Element>
     )
 };
 

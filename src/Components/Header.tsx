@@ -1,7 +1,8 @@
-import { Text, ActionIcon, ColorScheme, Drawer, Title, Burger, Transition } from "@mantine/core";
+import { Text, ActionIcon, Anchor, ColorScheme, Drawer, Title, Burger, Transition } from "@mantine/core";
 import { IconSun, IconMoonStars } from "@tabler/icons-react";
 import { HelmetProvider, Helmet } from "react-helmet-async";
 import { Link } from "react-scroll";
+import { useNavigate } from 'react-router-dom';
 import React from 'react';
 
 interface HeaderProps {
@@ -10,7 +11,9 @@ interface HeaderProps {
     toggleColorScheme: (value?: ColorScheme) => void;
 }
 
+
 const Header = (props: HeaderProps) => {
+    const navigate = useNavigate();
     const [opened, setOpened] = React.useState(false);
     const title = opened ? 'Close navigation' : 'Open navigation';
     return (
@@ -46,13 +49,17 @@ const Header = (props: HeaderProps) => {
                 </div>
                 <div className="navbar">
                     <div className="navbar-item">
-                        <Link to="project" smooth duration={500}>Projects</Link>
+                        <Text inherit onClick={() => {
+                            navigate("/", { state: { targetId: 'project' } });
+                        }}>Projects</Text>
                     </div>
                     <div className="navbar-item">
-                        <Link to="research" smooth duration={500}>Research</Link>
+                        <Text inherit onClick={() => {
+                                navigate("/", { state: { targetId: 'research' } });
+                        }}>Research</Text>
                     </div>
                     <div className="navbar-item">
-                        <Link to="about" smooth duration={500}>About Me</Link>
+                        <Anchor href="/#/about" inherit>About Me</Anchor>
                     </div>
                     <div className="navbar-item">
                         <ActionIcon
