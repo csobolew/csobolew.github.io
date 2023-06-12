@@ -25,7 +25,7 @@ export default function App() {
         <Header dark={dark} colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}/>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/about' element={<MoreAboutMe/>}/>
+          <Route path='about' element={<MoreAboutMe/>}/>
           <Route path='*' element={<NotFound/>}/>
         </Routes>
       </MantineProvider>
