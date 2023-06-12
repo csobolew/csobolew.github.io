@@ -1,7 +1,10 @@
 import { MantineProvider, ColorSchemeProvider, ColorScheme } from '@mantine/core';
 import { useState } from 'react';
 import Header from './Components/Header'
-import Body from './Views/Body'
+import Home from './Views/Home'
+import NotFound from './Views/NotFound'
+import MoreAboutMe from './Views/MoreAboutMe'
+import { Routes, Route } from 'react-router-dom'
 
 export default function App() {
 
@@ -20,8 +23,11 @@ export default function App() {
       <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
 
         <Header dark={dark} colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}/>
-        <Body/>
-        
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/about' element={<MoreAboutMe/>}/>
+          <Route path='*' element={<NotFound/>}/>
+        </Routes>
       </MantineProvider>
     </ColorSchemeProvider>
   );
