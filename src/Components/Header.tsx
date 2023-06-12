@@ -131,9 +131,10 @@ const Header = (props: HeaderProps) => {
                 >
                     <div className="menu">
                         <div className="menu-items">
-                            <div className="menu-item"><Link to="project" smooth duration={500} onClick={() => setOpened(false)}><Title order={2}>Projects</Title></Link></div>
-                            <div className="menu-item"><Link to="research" smooth duration={500} onClick={() => setOpened(false)}><Title order={2}>Research</Title></Link></div>
-                            <div className="menu-item"><Link to="about" smooth duration={500} onClick={() => setOpened(false)}><Title order={2}>About Me</Title></Link></div>
+                            <div className="menu-item"><Text component='a' inherit href="/#/" onClick={() => {setOpened(false)}}><Title order={2}>Home</Title></Text></div>
+                            <div className="menu-item"><Text inherit onClick={() => {navigate("/", { state: { targetId: 'project' } }); setOpened(false);}}><Title order={2}>Projects</Title></Text></div>
+                            <div className="menu-item"><Text inherit onClick={() => {navigate("/", { state: { targetId: 'research' } }); setOpened(false);}}><Title order={2}>Research</Title></Text></div>
+                            <div className="menu-item"><Text component='a' inherit href="/#/about" onClick={() => {setOpened(false)}}><Title order={2}>About Me</Title></Text></div>
                         </div>
                     </div>
                 </Drawer>
