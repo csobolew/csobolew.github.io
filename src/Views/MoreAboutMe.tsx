@@ -1,4 +1,4 @@
-import { Container, Group, Text, List, SimpleGrid, Image, ActionIcon, ThemeIcon, createStyles } from '@mantine/core'
+import { Container, Group, Text, List, SimpleGrid, Image, ThemeIcon, createStyles } from '@mantine/core'
 import { IconAlignBoxLeftMiddle, IconChevronRight } from '@tabler/icons-react'
 import { IconBrandGithub } from '@tabler/icons-react'
 
@@ -201,7 +201,7 @@ const { classes } = useStyles();
               placeholder
               caption={
                 <div className={classes.icondiv}>
-                    <a href='https://github.com/csobolew'><IconBrandGithub style={{color: 'var(--button-color)'}} size='36px'></IconBrandGithub></a>
+                    <a href='https://github.com/csobolew' target='_blank' rel='noreferrer'><IconBrandGithub style={{color: 'var(--button-color)'}} size='36px'></IconBrandGithub></a>
                     <a href='Resume.pdf' target='_blank'><IconAlignBoxLeftMiddle style={{color: 'var(--button-color)'}} size='36px'></IconAlignBoxLeftMiddle></a>
                 </div>
                 }>
