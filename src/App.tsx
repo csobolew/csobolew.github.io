@@ -1,5 +1,6 @@
 import { MantineProvider, ColorSchemeProvider, ColorScheme } from '@mantine/core';
 import { useState } from 'react';
+import { useLocalStorage } from '@mantine/hooks';
 import Header from './Components/Header'
 import Home from './Views/Home'
 import NotFound from './Views/NotFound'
@@ -8,7 +9,11 @@ import { Routes, Route } from 'react-router-dom'
 
 export default function App() {
 
-  const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
+  const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
+    key: 'mantine-color-scheme',
+    defaultValue: 'light',
+    getInitialValueInEffect: true,
+  });
   const toggleColorScheme = (value?: ColorScheme) =>
     setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
     document.documentElement.style.setProperty('--hover-color', (colorScheme === 'dark' ? '#fcc419' : '#15aabf'));

@@ -42,7 +42,7 @@ const Header = (props: HeaderProps) => {
                         fz="1.3rem"
                         fw={700}
                         component="a"
-                        href=""
+                        href="/#/"
                     >
                         Carson Sobolewski
                     </Text>
