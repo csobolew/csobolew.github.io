@@ -152,6 +152,7 @@ const Projects = () => {
                                 height='30vh'
                                 alt={data?.alt}
                                 withPlaceholder
+                                radius='md'
                                 caption={
                                 <div>
                                 <a href={data?.gitHubLink} target='_blank' rel='noreferrer'><IconBrandGithub style={{color: 'var(--button-color)'}} size='36px'></IconBrandGithub></a>

@@ -81,6 +81,7 @@ const Research = () => {
                                 height='30vh'
                                 alt={data?.alt}
                                 withPlaceholder
+                                radius='md'
                             />
                             <div id='textmodaldiv' style={{paddingLeft: '20px', maxWidth: '100vh'}}>
                                 <Text weight={500} fz={19} size='md'>Description</Text>
