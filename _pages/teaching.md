@@ -2,7 +2,7 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: classes I've helped to instruct.
+description: Classes I've helped to instruct.
 nav: true
 nav_order: 6
 ---
