@@ -21,4 +21,4 @@ My research interests lie at the intersection between **uncertainty quantificati
 
 In FINS, I have worked on automated reverse engineering of circuit boards (PCBs) from X-ray CT images, as well as explainability for Variational Autoencoder (VAE)-based counterfeit component detection. In the TEA Lab, I have worked on calibrated **safety chance prediction** for image-based control of autonomous vehicles using conformal prediction, as well as **distribution shift correction** and unsupervised domain adaptation for corrupted images in vision settings using Diffusion models and Generative Adversarial Networks (GANs). At MIT, I worked on **uncertainty quantification** for Object Detection Transformers (DETRs) on both the object and image level.
 
-Following my graduation in **Spring 2025**, I aim to pursue a PhD and continue my research on uncertainty quantification and reliable autonomous systems.
+Following my graduation in **Spring 2025**, I intend to pursue a PhD and continue my research on uncertainty quantification and reliable autonomous systems.
