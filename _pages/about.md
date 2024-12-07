@@ -13,7 +13,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I'm a fourth year undergraduate Computer Engineering student at [UF ECE](https://www.ece.ufl.edu/), advised by [Dr. Domenic Forte](https://dforte.ece.ufl.edu/) and [Dr. Ivan Ruchkin](https://ivan.ece.ufl.edu/) in the [Florida Institute for National Security](https://fins.institute.ufl.edu/) (FINS) and [Trustworthy Engineered Autonomy](https://tea.ece.ufl.edu/) (TEA) lab, respectively.
+I'm a fourth year undergraduate Computer Engineering student at [UF ECE](https://www.ece.ufl.edu/), advised by [Dr. Domenic Forte](https://dforte.ece.ufl.edu/) and [Dr. Ivan Ruchkin](https://ivan.ece.ufl.edu/) in the [Florida Institute for National Security](https://fins.institute.ufl.edu/) (FINS) and [Trustworthy Engineered Autonomy](https://tea.ece.ufl.edu/) (TEA) Lab, respectively.
 
 I've previously participated in the University Scholars Program and am currently a part of the AI Scholars Program through the UF Center for Undergraduate Research. This summer, I had the opportunity to work under [Dr. Navid Azizan](https://azizan.mit.edu/) at [MIT LIDS](https://lids.mit.edu/) through the MIT Summer Research Program (MSRP).
 
