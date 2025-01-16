@@ -1,6 +1,29 @@
 ---
 ---
 
+@article{park2025detr,
+  title={Identifying Reliable Predictions in Detection Transformers},
+  author={Park*, Young-Jin and Sobolewski*, Carson and Azizan, Navid},
+  abstract={DEtection TRansformer (DETR) has emerged as a promising architecture for object detection, offering an end-to-end prediction pipeline. In practice, however, DETR generates hundreds of predictions that far outnumber the actual number of objects present in an image. This raises the question: can we trust and use all of these predictions? Addressing this concern, we present empirical evidence highlighting how different predictions within the same image play distinct roles, resulting in varying reliability levels across those predictions. More specifically, while multiple predictions are often made for a single object, our findings show that most often one such prediction is well-calibrated, and the others are poorly calibrated. Based on these insights, we demonstrate identifying a reliable subset of DETR's predictions is crucial for accurately assessing the reliability of the model at both object and image levels.
+Building on this viewpoint, we first tackle the shortcomings of widely used performance and calibration metrics, such as average precision and various forms of expected calibration error. Specifically, they are inadequate for determining which subset of DETR's predictions should be trusted and utilized. In response, we present Object-level Calibration Error (OCE), which is capable of assessing the calibration quality both across different models and among various configurations within a specific model. As a final contribution, we introduce a post hoc Uncertainty Quantification (UQ) framework that predicts the accuracy of the model on a per-image basis. By contrasting the average confidence scores of positive (i.e., likely to be matched) and negative predictions determined by OCE, the framework assesses the reliability of the DETR model for each test image. },
+  journal={Under Review at IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2025},
+  url={https://arxiv.org/abs/2412.01782},
+  pdf={https://arxiv.org/pdf/2412.01782},
+  dimensions={false},
+  preview={detr.png},
+  selected={true}
+}
+@article{sobolewski2025pcb,
+  title={A Framework for PCB Design File Reconstruction from X-ray CT Annotations},
+  author={Sobolewski, Carson and Koblah, David and Forte, Domenic},
+  abstract={Reverse engineering (RE) is often used in security critical applications to determine the structure and functionality of various systems, including printed circuit boards (PCBs). Although it has both beneficial and malicious uses, it is particularly vital within the realm of hardware trust and assurance. PCB RE enhances legacy electronic system replacement, intellectual property (IP) protection, and supply chain integrity. To contribute to the requirements of effective PCB RE, extensive research has been conducted on the analysis of PCBs using X-ray computed tomography (CT) scans, including image segmentation focusing on via and trace annotation. Applying extracted annotations, this work outlines a Python-based framework, coupled with the open-source KiCAD software, for the automated reconstruction of PCB design files. Given the via, pad and trace annotations, in addition to board dimensions, the algorithm automatically recognizes board shape, trace size, and connections to reconstruct the bare PCB accurately. This technique was tested on three distinct layers of a sample multilayer PCB with great success. Its feasibility holds great promise for future extensions to complete the entire PCB RE framework.},
+  journal={Under Review at International Symposium on Quality Electronic Design (ISQED)},
+  year={2025},
+  dimensions={false},
+  preview={pcb.png},
+  selected={true}
+}
 @article{mao2024chance,
   title={How Safe Am I Given What I See? Calibrated Prediction of Safety Chances for Image-Controlled Autonomy},
   author={Mao, Zhenjiang and Sobolewski, Carson and Ruchkin, Ivan},
