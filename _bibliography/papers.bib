@@ -1,12 +1,24 @@
 ---
 ---
+@article{sobolewski2025repair,
+  title={Generalizable Image Repair for Robust Visual Autonomous Racing},
+  author={Sobolewski, Carson and Mao, Zhenjiang and Vejre, Kshitij and Ruchkin, Ivan},
+  abstract={Vision-based autonomous racing relies on accurate perception for robust control. However, image distribution changes caused by sensor noise, adverse weather, and dynamic lighting can degrade perception, leading to suboptimal control decisions. Existing approaches, including domain adaptation and adversarial training, improve robustness but struggle to generalize to unseen corruptions while introducing computational overhead. To address this challenge, we propose a real-time image repair module that restores corrupted images before they are used by the controller. Our method leverages generative adversarial models, specifically CycleGAN and pix2pix, for image repair. CycleGAN enables unpaired image-to-image translation to adapt to novel corruptions, while pix2pix exploits paired image data when available to improve the quality. To ensure alignment with control performance, we introduce a control-focused loss function that prioritizes perceptual consistency in repaired images. We evaluated our method in a simulated autonomous racing environment with various visual corruptions. The results show that our approach significantly improves performance compared to baselines, mitigating distribution shift and enhancing controller reliability.},
+  journal={In Submission at IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year={2025},
+  url={https://arxiv.org/abs/2503.05911},
+  pdf={https://arxiv.org/abs/2503.05911},
+  dimensions={false},
+  preview={repair.png},
+  selected={true}
+}
 
 @article{park2025detr,
-  title={Identifying Reliable Predictions in Detection Transformers},
+  title={Quantifying the Reliability of Predictions in Detection Transformers: Object-Level Calibration and Image-Level Uncertainty},
   author={Park*, Young-Jin and Sobolewski*, Carson and Azizan, Navid},
-  abstract={DEtection TRansformer (DETR) has emerged as a promising architecture for object detection, offering an end-to-end prediction pipeline. In practice, however, DETR generates hundreds of predictions that far outnumber the actual number of objects present in an image. This raises the question: can we trust and use all of these predictions? Addressing this concern, we present empirical evidence highlighting how different predictions within the same image play distinct roles, resulting in varying reliability levels across those predictions. More specifically, while multiple predictions are often made for a single object, our findings show that most often one such prediction is well-calibrated, and the others are poorly calibrated. Based on these insights, we demonstrate identifying a reliable subset of DETR's predictions is crucial for accurately assessing the reliability of the model at both object and image levels.
-Building on this viewpoint, we first tackle the shortcomings of widely used performance and calibration metrics, such as average precision and various forms of expected calibration error. Specifically, they are inadequate for determining which subset of DETR's predictions should be trusted and utilized. In response, we present Object-level Calibration Error (OCE), which is capable of assessing the calibration quality both across different models and among various configurations within a specific model. As a final contribution, we introduce a post hoc Uncertainty Quantification (UQ) framework that predicts the accuracy of the model on a per-image basis. By contrasting the average confidence scores of positive (i.e., likely to be matched) and negative predictions determined by OCE, the framework assesses the reliability of the DETR model for each test image. },
-  journal={Under Review at IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  abstract={DEtection TRansformer (DETR) has emerged as a promising architecture for object detection, offering an end-to-end prediction pipeline. In practice, however, DETR generates hundreds of predictions that far outnumber the actual number of objects present in an image. This raises the question: can we trust and use all of these predictions? Addressing this concern, we present empirical evidence highlighting how different predictions within the same image play distinct roles, resulting in varying reliability levels across those predictions. More specifically, while multiple predictions are often made for a single object, our findings show that most often one such prediction is well-calibrated, and the others are poorly calibrated. Based on these insights, we demonstrate that identifying a reliable subset of DETR's predictions is crucial for accurately assessing the reliability of the model at both object and image levels.
+Building on this viewpoint, we first address the shortcomings of widely used performance and calibration metrics, such as average precision and various forms of expected calibration error. Specifically, they are inadequate for determining which subset of DETR's predictions should be trusted and utilized. In response, we present Object-level Calibration Error (OCE), which assesses the calibration quality more effectively and is suitable for both ranking different models and identifying the most reliable predictions within a specific model. As a final contribution, we introduce a post hoc uncertainty quantification (UQ) framework that predicts the accuracy of the model on a per-image basis. By contrasting the average confidence scores of positive (i.e., likely to be matched) and negative predictions determined by OCE, our framework assesses the reliability of the DETR model for each test image.},
+  journal={In Submission at IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
   year={2025},
   url={https://arxiv.org/abs/2412.01782},
   pdf={https://arxiv.org/pdf/2412.01782},
@@ -18,7 +30,7 @@ Building on this viewpoint, we first tackle the shortcomings of widely used perf
   title={A Framework for PCB Design File Reconstruction from X-ray CT Annotations},
   author={Sobolewski, Carson and Koblah, David and Forte, Domenic},
   abstract={Reverse engineering (RE) is often used in security critical applications to determine the structure and functionality of various systems, including printed circuit boards (PCBs). Although it has both beneficial and malicious uses, it is particularly vital within the realm of hardware trust and assurance. PCB RE enhances legacy electronic system replacement, intellectual property (IP) protection, and supply chain integrity. To contribute to the requirements of effective PCB RE, extensive research has been conducted on the analysis of PCBs using X-ray computed tomography (CT) scans, including image segmentation focusing on via and trace annotation. Applying extracted annotations, this work outlines a Python-based framework, coupled with the open-source KiCAD software, for the automated reconstruction of PCB design files. Given the via, pad and trace annotations, in addition to board dimensions, the algorithm automatically recognizes board shape, trace size, and connections to reconstruct the bare PCB accurately. This technique was tested on three distinct layers of a sample multilayer PCB with great success. Its feasibility holds great promise for future extensions to complete the entire PCB RE framework.},
-  journal={Under Review at International Symposium on Quality Electronic Design (ISQED)},
+  journal={International Symposium on Quality Electronic Design (ISQED)},
   year={2025},
   dimensions={false},
   preview={pcb.png},
@@ -28,7 +40,7 @@ Building on this viewpoint, we first tackle the shortcomings of widely used perf
   title={How Safe Am I Given What I See? Calibrated Prediction of Safety Chances for Image-Controlled Autonomy},
   author={Mao, Zhenjiang and Sobolewski, Carson and Ruchkin, Ivan},
   abstract={End-to-end learning has emerged as a major paradigm for developing autonomous systems. Unfortunately, with its performance and convenience comes an even greater challenge of safety assurance. A key factor of this challenge is the absence of the notion of a low-dimensional and interpretable dynamical state, around which traditional assurance methods revolve. Focusing on the online safety prediction problem, this paper proposes a configurable family of learning pipelines based on generative world models, which do not require low-dimensional states. To implement these pipelines, we overcome the challenges of learning safety-informed latent representations and missing safety labels under prediction-induced distribution shift. These pipelines come with statistical calibration guarantees on their safety chance predictions based on conformal prediction. We perform an extensive evaluation of the proposed learning pipelines on two case studies of image-controlled systems: a racing car and a cartpole.},
-  journal={In Learning for Dynamics &amp; Control (L4DC) Conference},
+  journal={Learning for Dynamics &amp; Control (L4DC) Conference},
   volume={242},
   pages={1370--1387},
   numpages={17},
