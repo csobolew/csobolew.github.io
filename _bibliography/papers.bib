@@ -13,30 +13,29 @@
   selected={true}
 }
 
-@article{sobolewski2025repair,
-  title={Generalizable Image Repair for Robust Visual Autonomous Control},
-  author={Sobolewski, Carson and Mao, Zhenjiang and Vejre, Kshitij and Ruchkin, Ivan},
-  abstract={Vision-based autonomous racing relies on accurate perception for robust control. However, image distribution changes caused by sensor noise, adverse weather, and dynamic lighting can degrade perception, leading to suboptimal control decisions. Existing approaches, including domain adaptation and adversarial training, improve robustness but struggle to generalize to unseen corruptions while introducing computational overhead. To address this challenge, we propose a real-time image repair module that restores corrupted images before they are used by the controller. Our method leverages generative adversarial models, specifically CycleGAN and pix2pix, for image repair. CycleGAN enables unpaired image-to-image translation to adapt to novel corruptions, while pix2pix exploits paired image data when available to improve the quality. To ensure alignment with control performance, we introduce a control-focused loss function that prioritizes perceptual consistency in repaired images. We evaluated our method in a simulated autonomous racing environment with various visual corruptions. The results show that our approach significantly improves performance compared to baselines, mitigating distribution shift and enhancing controller reliability.},
-  journal={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-  year={2025},
-  url={https://arxiv.org/abs/2503.05911},
-  pdf={https://arxiv.org/pdf/2503.05911},
-  dimensions={false},
-  preview={repair.png},
-  selected={true}
-}
-
 @article{park2025detr,
   title={Quantifying the Reliability of Predictions in Detection Transformers: Object-Level Calibration and Image-Level Uncertainty},
   author={Park*, Young-Jin and Sobolewski*, Carson and Azizan, Navid},
-  abstract={DEtection TRansformer (DETR) has emerged as a promising architecture for object detection, offering an end-to-end prediction pipeline. In practice, however, DETR generates hundreds of predictions that far outnumber the actual number of objects present in an image. This raises the question: can we trust and use all of these predictions? Addressing this concern, we present empirical evidence highlighting how different predictions within the same image play distinct roles, resulting in varying reliability levels across those predictions. More specifically, while multiple predictions are often made for a single object, our findings show that most often one such prediction is well-calibrated, and the others are poorly calibrated. Based on these insights, we demonstrate that identifying a reliable subset of DETR's predictions is crucial for accurately assessing the reliability of the model at both object and image levels.
-Building on this viewpoint, we first address the shortcomings of widely used performance and calibration metrics, such as average precision and various forms of expected calibration error. Specifically, they are inadequate for determining which subset of DETR's predictions should be trusted and utilized. In response, we present Object-level Calibration Error (OCE), which assesses the calibration quality more effectively and is suitable for both ranking different models and identifying the most reliable predictions within a specific model. As a final contribution, we introduce a post hoc uncertainty quantification (UQ) framework that predicts the accuracy of the model on a per-image basis. By contrasting the average confidence scores of positive (i.e., likely to be matched) and negative predictions determined by OCE, our framework assesses the reliability of the DETR model for each test image.},
+  abstract={DEtection TRansformer (DETR) and its variants have emerged as promising architectures for object detection, offering an end-to-end prediction pipeline. In practice, however, DETRs generate hundreds of predictions that far outnumber the actual objects present in an image. This raises a critical question: which of these predictions could be trusted? This is particularly important for safety-critical applications, such as in autonomous vehicles. Addressing this concern, we provide empirical and theoretical evidence that predictions within the same image play distinct roles, resulting in varying reliability levels. Our analysis reveals that DETRs employ an optimal “specialist strategy”: one prediction per object is trained to be well-calibrated, while the remaining predictions are trained to suppress their foreground confidence to near zero, even when maintaining accurate localization. We show that this strategy emerges as the loss-minimizing solution to the Hungarian matching algorithm, fundamentally shaping DETRs’ outputs. While selecting the well-calibrated predictions is ideal, they are unidentifiable at inference time. This means that any post-processing algorithm—used to identify trustworthy predictions—poses a risk of outputting a set of predictions with mixed calibration levels. Therefore, practical deployment necessitates a joint evaluation of both the model’s calibration quality and the effectiveness of the post-processing algorithm. However, we demonstrate that existing metrics like average precision and expected calibration error are inadequate for this task. To address this issue, we further introduce Object-level Calibration Error (OCE), which evaluates calibration by aggregating predictions per ground-truth object rather than per prediction. This object-centric design penalizes both retaining suppressed predictions and missed ground truth foreground objects, making OCE suitable for both evaluating models and identifying reliable prediction subsets. Finally, we present a post hoc uncertainty quantification (UQ) framework that predicts per-image model accuracy.},
   journal={Under Review},
   year={2025},
   url={https://arxiv.org/abs/2412.01782},
   pdf={https://arxiv.org/pdf/2412.01782},
   dimensions={false},
   preview={detr.png},
+  selected={true}
+}
+
+@article{sobolewski2025repair,
+  title={Generalizable Image Repair for Robust Visual Control},
+  author={Sobolewski, Carson and Mao, Zhenjiang and Vejre, Kshitij and Ruchkin, Ivan},
+  abstract={Vision-based control relies on accurate perception to achieve robustness. However, image distribution changes caused by sensor noise, adverse weather, and dynamic lighting can degrade perception, leading to suboptimal control decisions. Existing approaches, including domain adaptation and adversarial training, improve robustness but struggle to generalize to unseen corruptions while introducing computational overhead. To address this challenge, we propose a real-time image repair module that restores corrupted images before they are used by the controller. Our method leverages generative adversarial models, specifically CycleGAN and pix2pix, for image repair. CycleGAN enables unpaired image-to-image translation to adapt to novel corruptions, while pix2pix exploits paired image data when available to improve the quality. To ensure alignment with control performance, we introduce a control-focused loss function that prioritizes perceptual consistency in repaired images. We evaluated our method in a simulated autonomous racing environment with various visual corruptions. The results show that our approach significantly improves performance compared to baselines, mitigating distribution shift and enhancing controller reliability.},
+  journal={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year={2025},
+  url={https://arxiv.org/abs/2503.05911},
+  pdf={https://arxiv.org/pdf/2503.05911},
+  dimensions={false},
+  preview={repair.png},
   selected={true}
 }
 @article{sobolewski2025pcb,
@@ -48,7 +47,7 @@ Building on this viewpoint, we first address the shortcomings of widely used per
   pdf={https://ieeexplore.ieee.org/document/11014423},
   dimensions={false},
   preview={pcb.png},
-  selected={true}
+  selected={false}
 }
 @article{mao2024chance,
   title={How Safe Am I Given What I See? Calibrated Prediction of Safety Chances for Image-Controlled Autonomy},
